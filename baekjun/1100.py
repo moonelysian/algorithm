@@ -1,7 +1,6 @@
 chess = []
 for i in range(8):
     chess.append(input())
-print(chess)
 num = 0
 
 for i in range(8):
