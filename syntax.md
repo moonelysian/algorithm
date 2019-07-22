@@ -24,3 +24,32 @@ d = 1
 id(c) # 12345
 id(d) # 12345
 ```
+
+## *args & **kwargs
+
+#### *args
+여러 개의 인자를 함수로 받고자 할 때
+```python
+# mylist 원소의 행과 열 뒤집기
+mylist=[
+    [1,2,3],
+    [4,5,6],
+    [7,8,9]
+]
+
+result = list(map(list,zip(*mylist)))
+```
+
+#### **kwargs
+keyword argument의 줄임말로 키워드를 제공
+
+```python
+def intro(**kwargs):
+    for key, value in kwargs.items():
+        print("{0} is {1}".formant(key,value))
+
+intro(MyName = 'Moon') 
+# MyName is Moon
+```
+`**kwargs`는 (키워드 = 특정 값) 형태로 함수를 호출할 수 있음
+그대로 딕셔너리 형태로 함수 내부로 전달
