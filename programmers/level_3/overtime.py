@@ -12,7 +12,4 @@ def solution(n, works):
         heapq.heappush(works, work)
 
     works = [work*work for work in works]
-    
     return sum(works)
-
-solution(4, [4, 3, 3])
